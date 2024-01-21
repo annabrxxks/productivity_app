@@ -115,6 +115,12 @@ input {
     background-color: transparent;
     border: none;
 }
+.todo-add-button:hover {
+    animation: wiggle 3s infinite;
+    -webkit-box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
 
 .bookmarks-bar {
     display: flex;
@@ -141,4 +147,34 @@ input {
     border-radius: 4px;
     border: 1px black solid;
     animation: wiggle 3s infinite;
+}
+
+.pomodoro {
+    background-image: url('assets/meadow.jpg');
+    background-position: 50% 71%;
+}
+.pomodoro-clock {
+    display: flex;
+    gap: 3px;
+    font-family: Helvetica, sans-serif;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: bold;
+}
+.pomodoro-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+}
+.pomodoro-button {
+    border-radius: 5px;
+    font-family: inherit;
+    padding: 5px 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.active {
+    background-color: rgba(255, 255, 255, 1.0);
 }

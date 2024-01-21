@@ -15,11 +15,11 @@
 
   <body class="body">
     <div id="header" class="row centered header">
-      <button id="theme-button" onclick="themeToggle()">
+      <!-- <button id="theme-button" onclick="themeToggle()">
         <img class="icon-small" src="./assets/settings.png"/>
-      </button>
+      </button> -->
         <img id="avatar" class="avatar" src="./assets/panda.png"/>
-            <h1>anna's cozy cafe</h1>
+            <h1>cozy cafe</h1>
     </div>
     <div class="row centered">
     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4yu1av3xZqOUiToGj7fv7E?utm_source=generator" width="30%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -32,7 +32,7 @@
             <ul class="todo-list" id="todo-list"></ul>
             <form id="todo-add">
               <button class="todo-add-button" type="button" onclick="addTodoItem()">
-                  <img class="icon-small" src="./assets/unchecked.png"/>
+                  <img class="icon-small" src="./assets/add.png"/>
               </button>
               <input placeholder="add new item..." type="text" id="todo-input" required>
             </form>
@@ -58,13 +58,25 @@
                 <span class="bookmark-name" id="bookmark3-name" onclick="addBookmark3()">add bookmark</span>
               </div>
           </div>
-        </div>
     </div>
-    
-    <!-- <div class = "widget">
-        <h4>pomodoro timer</h4>
-    </div> -->
+    </div>
     <div class="row centered">
-      <iframe style="border-radius:12px" width="560" height="315" src="https://www.youtube.com/embed/h2zkV-l_TbY?si=Pc--rYPtKJOm72C0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                          
+      <div class = "pomodoro widget">
+        <div class="pomodoro-row">
+          <button class="pomodoro-button active" data-mode="pomodoro" id="pomodoro">pomodoro</button>
+          <button class="pomodoro-button" data-mode="shortBreak" id="short-break">short break</button>
+          <button class="pomodoro-button" data-mode="longBreak" id="long-break">long break</button>          
+        </div>
+        <div class = "pomodoro-clock">
+          <div id="minutes">25</div>
+          <div id=":">:</div>
+          <div id="seconds">00</div>
+        </div>
+        <div class="pomodoro-row">
+          <button class="pomodoro-button" id="start" onclick="startTimer()">start</button>
+        </div>
+      </div>
+      <iframe style="border-radius:12px" width="460" height="315" src="https://www.youtube.com/embed/h2zkV-l_TbY?si=Pc--rYPtKJOm72C0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 </html>
