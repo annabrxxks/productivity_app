@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>study app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Pixelify+Sans&family=Poppins&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='pink_style.css' rel='stylesheet'>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="functions.js" defer></script>
+  </head>
+
+  <body class="body">
+    <div id="header" class="row centered header">
+      <button id="theme-button" onclick="themeToggle()">
+        <img class="icon-small" src="./assets/settings.png"/>
+      </button>
+        <img id="avatar" class="avatar" src="./assets/panda.png"/>
+            <h1>anna's cozy cafe</h1>
+    </div>
+    <div class="row centered">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4yu1av3xZqOUiToGj7fv7E?utm_source=generator" width="30%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <div class="column">
+        <div class="widget">
+            <div class="row center-vertical">
+              <img class="icon" src="./assets/coffee.png"/>
+              <h4>to-do list</h4>
+            </div>
+            <ul class="todo-list" id="todo-list"></ul>
+            <form id="todo-add">
+              <button class="todo-add-button" type="button" onclick="addTodoItem()">
+                  <img class="icon-small" src="./assets/unchecked.png"/>
+              </button>
+              <input placeholder="add new item..." type="text" id="todo-input" required>
+            </form>
+          </div>
+          
+          <div class="bookmarks-bar">
+              <div class="bookmark"> 
+                <a href="#" id="bookmark1-link" target = "_blank">
+                    <img class="bookmark-img icon" src="./assets/book.png"/>
+                </a>
+                <span class="bookmark-name" id="bookmark1-name" onclick="addBookmark1()">add bookmark</span>
+              </div>
+              <div class="bookmark"> 
+                <a href="#" id="bookmark2-link" target = "_blank">
+                    <img class="bookmark-img icon" src="./assets/basket.png"/>
+                </a>
+                <span class="bookmark-name" id="bookmark2-name" onclick="addBookmark2()">add bookmark</span>
+              </div>
+              <div class="bookmark"> 
+                <a href="#" id="bookmark3-link" target = "_blank">
+                    <img class="bookmark-img icon" src="./assets/plant.png"/>
+                </a>
+                <span class="bookmark-name" id="bookmark3-name" onclick="addBookmark3()">add bookmark</span>
+              </div>
+          </div>
+        </div>
+    </div>
+    
+    <!-- <div class = "widget">
+        <h4>pomodoro timer</h4>
+    </div> -->
+    <div class="row centered">
+      <iframe style="border-radius:12px" width="560" height="315" src="https://www.youtube.com/embed/h2zkV-l_TbY?si=Pc--rYPtKJOm72C0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+</html>
